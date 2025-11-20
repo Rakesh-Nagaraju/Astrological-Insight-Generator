@@ -1,6 +1,6 @@
 # Astrological Insight Generator
 
-So I built this service for a take-home assignment. It takes someone's birth details (name, date, time, location) and spits out a personalized daily astrological insight. The whole thing uses zodiac logic to figure out the sign, then calls an LLM to generate something that actually sounds human.
+This project was built as part of a take-home assignment. It provides a simple service that accepts a user’s birth details (name, date, time, and location) and generates a personalized daily astrological insight. The system infers the zodiac sign using basic astrological logic and then uses an LLM (or a mock LLM in fallback mode) to produce natural, human-like interpretations.
 
 ## What it does
 
