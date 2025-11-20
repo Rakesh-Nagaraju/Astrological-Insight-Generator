@@ -43,26 +43,43 @@ pip install -r requirements.txt
 
 ### API keys (optional)
 
-The system works without API keys (uses mock LLM), but if you want real AI-generated insights, you'll need at least one.
+**✅ IMPORTANT: The system works perfectly without any API keys!**
 
-I set it up to try them in this order:
-1. Google Gemini (free tier - this is what I'm using)
+If you don't have API keys, the system will automatically use a **mock LLM** that provides personalized template-based insights for all 12 zodiac signs. This means you can test the entire system immediately without any setup.
+
+The mock LLM includes pre-written, personalized insights like:
+- "Dear Ritika, your innate leadership and warmth will shine today. Embrace spontaneity and avoid overthinking. Your natural charisma will help you connect with others." (for Leo)
+- And similar personalized messages for all other zodiac signs
+
+**If you want real AI-generated insights**, you can optionally add API keys. The system tries providers in this order:
+1. Google Gemini (free tier - recommended)
 2. HuggingFace Inference API (also free)
 3. OpenAI (paid, but good quality)
-4. Mock LLM (always works, template-based)
+4. Mock LLM (always works as fallback - no API keys needed)
 
-**Getting Gemini key:**
+**Setting up API keys (optional):**
+
+1. Copy the example file:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Edit `.env` and add your API keys (or leave them empty to use mock LLM)
+
+**Getting API keys (optional):**
+
+**Gemini (free):**
 - Go to https://makersuite.google.com/app/apikey
 - Sign in, create API key, copy it
 
-**Getting HuggingFace token:**
+**HuggingFace (free):**
 - Sign up at https://huggingface.co/
 - Go to Settings > Access Tokens, create one with Read permissions
 
-**Setting it up:**
+**OpenAI (paid):**
+- Get your key from https://platform.openai.com/api-keys
 
-I already created a `.env` file with a Gemini key for testing. You can edit it or set environment variables:
-
+**Or set environment variables directly:**
 ```bash
 export GEMINI_API_KEY="your-key-here"
 export HUGGINGFACE_API_KEY="your-token-here"  # optional
